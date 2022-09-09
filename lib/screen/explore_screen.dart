@@ -54,7 +54,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
               ),
               SliverToBoxAdapter(
                 child: SizedBox(
-                  height: 100,
+                  height: 60,
                 ),
               ),
             ],

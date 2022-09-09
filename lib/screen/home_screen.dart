@@ -178,6 +178,11 @@ class _HomeScreenState extends State<HomeScreen>
             childCount: 5,
           ),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 60,
+          ),
+        ),
       ],
     );
   }
