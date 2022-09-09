@@ -21,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     super.initState();
     Timer(Duration(milliseconds: 1200), () {
       _scrollController.animateTo(_scrollController.position.maxScrollExtent,
-          duration: Duration(milliseconds: 11000), curve: Curves.easeInOut);
+          duration: Duration(milliseconds: 35000), curve: Curves.easeInOut);
     });
   }
 
@@ -140,14 +140,8 @@ class _MainScreenState extends State<MainScreen> {
   List<Widget> _getLayoutPage() => [
         HomeScreen(),
         ExploreScreen(),
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.amber,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
+        Container(color: Colors.red),
+        Container(color: Colors.amber),
+        Container(color: Colors.blue),
       ];
 }

@@ -179,7 +179,7 @@ class ShowNewsScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: Container(
-                    margin: EdgeInsets.only(right: 24, left: 24, bottom: 15),
+                    margin: EdgeInsets.only(right: 24, left: 24),
                     child: Row(
                       children: [
                         Column(
