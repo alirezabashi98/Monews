@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:monews/screen/show_news_screen.dart';
+import 'package:monews/screen/explore_screen.dart';
+import 'package:monews/screen/home_screen.dart';
 
 void main() {
   runApp(Application());
@@ -12,7 +13,7 @@ class Application extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ShowNewsScreen(),
+      home: HomeScreen(),
     );
   }
 }

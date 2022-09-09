@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:monews/constants/constants.dart';
+import 'package:monews/screen/show_news_screen.dart';
+import 'package:monews/utility/go_to_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -52,8 +54,7 @@ class _HomeScreenState extends State<HomeScreen>
             ),
           ),
           SizedBox(width: 7),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
+          ClipOval(
             child: Image.asset(
               listNewsAgency[index].icon!,
               width: 40,
@@ -146,7 +147,15 @@ class _HomeScreenState extends State<HomeScreen>
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return _getContentPostNews();
+                return GestureDetector(
+                  onTap: () {
+                    GoToPaget(
+                      context,
+                      ShowNewsScreen(),
+                    );
+                  },
+                  child: _getContentPostNews(),
+                );
               },
               itemCount: 5,
             ),
@@ -338,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen>
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Row(
                 children: [
-                  Image.asset("assets/images/flash-circle.png"),
+                  Image.asset("assets/images/flash_circle.png"),
                   SizedBox(width: 10),
                   Text(
                     "پیشنهاد مونیوز",

@@ -12,6 +12,19 @@ Color white = const Color(0xffFAFAFA);
 String news_agency02 =
     "https://cdn01.zoomit.ir/Avatars//b2e3b3fc-eb1c-47de-a3af-f43458f964d6.jpg?w=120";
 
+List<String> mainGrouping = [
+  "همه",
+  "جهان",
+  "ورزش",
+  "تکنولوژی",
+  "علم و دانش",
+];
+
+List<String> listBanner = [
+  'assets/images/banner_1.png',
+  'assets/images/banner_2.png',
+];
+
 List<String> defaultGrouping = [
   "ورزشی",
   "لژیونر ها",

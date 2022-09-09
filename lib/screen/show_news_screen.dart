@@ -71,7 +71,7 @@ class ShowNewsScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Row(
                   children: [
-                    Image.asset('assets/images/flash-circle.png'),
+                    Image.asset('assets/images/flash_circle.png'),
                     SizedBox(width: 5),
                     Text(
                       "پیشنهاد مونیوز",
@@ -81,7 +81,7 @@ class ShowNewsScreen extends StatelessWidget {
                         fontSize: 10,
                       ),
                     ),
-                    Spacer(),
+                    Spacer(flex: 2,),
                     Container(
                       height: 26,
                       decoration: BoxDecoration(
@@ -107,7 +107,7 @@ class ShowNewsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    Spacer(flex: 6,),
                     Text(
                       "5 دقیقه قبل",
                       style: TextStyle(
@@ -133,7 +133,7 @@ class ShowNewsScreen extends StatelessWidget {
               ),
               Container(
                 height: 40,
-                margin: EdgeInsets.only(top: 20, right: 24),
+                margin: EdgeInsets.only(top: 20,right: 24),
                 width: double.infinity,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
