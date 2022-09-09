@@ -12,6 +12,12 @@ Color white = const Color(0xffFAFAFA);
 String news_agency02 =
     "https://cdn01.zoomit.ir/Avatars//b2e3b3fc-eb1c-47de-a3af-f43458f964d6.jpg?w=120";
 
+List<String> defaultGrouping = [
+  "ورزشی",
+  "لژیونر ها",
+  "فوتبال اروپا",
+];
+
 List<NewsAgencyModel> listNewsAgency = [
   NewsAgencyModel(
       name: "خبرگزاری آخرین خبر",
