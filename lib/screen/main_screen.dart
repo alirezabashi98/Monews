@@ -1,6 +1,5 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:marquee/marquee.dart';
 import 'package:monews/constants/constants.dart';
 import 'package:monews/screen/explore_screen.dart';
 import 'package:monews/screen/home_screen.dart';
@@ -14,16 +13,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _selectedItemNavigation = 0;
-  ScrollController _scrollController = ScrollController();
-
-  @override
-  void initState() {
-    super.initState();
-    Timer(Duration(milliseconds: 1200), () {
-      _scrollController.animateTo(_scrollController.position.maxScrollExtent,
-          duration: Duration(milliseconds: 35000), curve: Curves.easeInOut);
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -114,23 +103,27 @@ class _MainScreenState extends State<MainScreen> {
                 color: main_red,
                 width: double.infinity,
                 height: 48,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  controller: _scrollController,
-                  child: Center(
-                    child: Text(
-                      maxLines: 1,
-                      "         برانکو تکذیب کرد/ نه با عمان فسخ کردم، نه با ایران مذاکره داشتم   ...   برانکو تکذیب کرد/ نه با عمان فسخ کردم، نه با ایران مذاکره داشتم   ...",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'SB',
-                        fontSize: 16,
-                      ),
-                    ),
+                child: Marquee(
+                  text:
+                      'برانکو تکذیب کرد/ نه با عمان فسخ کردم، نه با ایران مذاکره داشتم   ...',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'SB',
+                    fontSize: 16,
                   ),
+                  scrollAxis: Axis.horizontal,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  blankSpace: 20.0,
+                  velocity: 100.0,
+                  pauseAfterRound: Duration(seconds: 1),
+                  startPadding: 10.0,
+                  accelerationDuration: Duration(seconds: 1),
+                  accelerationCurve: Curves.linear,
+                  decelerationDuration: Duration(milliseconds: 500),
+                  decelerationCurve: Curves.easeOut,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

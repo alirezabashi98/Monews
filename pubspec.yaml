@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   iconsax: ^0.0.8
   scroll_page_view: ^1.0.2
+  marquee: ^2.2.3
   
 
 dev_dependencies:
