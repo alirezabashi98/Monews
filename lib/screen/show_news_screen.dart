@@ -11,6 +11,7 @@ class ShowNewsScreen extends StatelessWidget {
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return [
             SliverAppBar(
+              automaticallyImplyLeading: false,
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(top: 24, left: 24),
